@@ -1,87 +1,42 @@
 :root {
-    --color-bg: #0b0f1a;
-    --color-surface: #141a24;
+    --neon-blue: #00E5FF;
+    --neon-red: #FF3131;
     --color-text: #e6edf3;
-    --color-muted: #9aa4b2;
-    --color-primary: #7c3aed;
-    --color-secondary: #06b6d4;
-    --color-accent: #f43f5e;
+    --color-accent: #FF3131;
     --color-border: #2b3441;
 }
 
-
-
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --color-bg: #ffffff;
-        --color-surface: #f8fafc;
-        --color-text: #0f172a;
-        --color-muted: #64748b;
-        --color-primary: #4f46e5;
-        --color-secondary: #0ea5e9;
-        --color-accent: #FF3131;
-        --color-border: #e5e7eb;
-    }
-}
-
-html, body {
-    height: 100%;
+html {
+    min-height: 100%;
 }
 
 body {
     margin: 0;
+    padding: 20px;
+    min-height: 100vh;
     background: linear-gradient(
         180deg,
         rgba(13, 17, 46, 1) 0%,
         rgba(27, 27, 37, 1) 40%,
         rgba(42, 42, 42, 1) 100%
     );
+    background-attachment: fixed;
+    background-size: cover;
     color: var(--color-text);
+    font-size: 1rem;
+    font-family: "Tilt Neon", sans-serif;
+    line-height: 1.8;
 }
 
-a {
-    color: var(--color-primary);
-}
-a:hover {
-    color: var(--color-accent);
-}
-
-.border {
-    border: 1px solid var(--color-border);
-}
-.muted {
-    color: var(--color-muted);
-}
-.bg-surface {
-    background-color: var(--color-surface);
-}
-
-
-.faster-one-regular {
-  font-family: "Faster One", system-ui;
-}
-
-.tilt-neon-regular {
-  font-family: "Tilt Neon", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "XROT" 0,
-    "YROT" 0;   
-}
-
-h1, h2 {
+h1, h2, h3 {
     color: #FFF;
-
-text-align: center;
--webkit-text-stroke-width: 1px;
--webkit-text-stroke-color: #FF3131;
-font-family: "Faster One";
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FF3131;
+    font-family: "Faster One";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 h1 {
@@ -90,38 +45,703 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-family: "Faster One", system-ui, sans-serif;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
 }
 
 h3 {
   font-size: 2rem;
-  font-family: "Tilt Neon", sans-serif;
+  font-family: "Faster One", system-ui, sans-serif;
 }
+
+/* Section Title with Icon */
+.section-title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px var(--neon-blue));
+}
+
 
 h4 {
   font-size: 1.5rem;
   font-family: "Tilt Neon", sans-serif;
 }
 
-body {
-  font-size: 1rem;
-  font-family: "Tilt Neon", sans-serif;
+/* Text Content Width Control */
+p, li {
+  max-width: 65ch; /* Roughly 15-20 words per line */
+  margin-bottom: 1.5rem;
 }
 
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
 
-.hours-and-location{
+.menu-note {
+  max-width: 65ch;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(0, 229, 255, 0.1);
+  border-left: 3px solid var(--neon-blue);
+  border-radius: 5px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+/* Menu Items Styling - Enhanced hierarchy */
+.Menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Two-column layout for menu sections on larger screens */
+@media (min-width: 769px) {
+  .pizza ul,
+  .sandwiches ul,
+  .drinks ul {
+    column-count: 2;
+    column-gap: 3rem;
+  }
+  
+  .Menu li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* Keep appetizers single column on all screens */
+.appetizers ul {
+  column-count: 1;
+}
+
+.Menu li {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 49, 49, 0.2);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.Menu li:last-child {
+  border-bottom: none;
+}
+
+/* Item titles - make them stand out more */
+.Menu li strong {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Price styling */
+.price {
+  color: var(--color-text);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 0 10px var(--neon-red);
+}
+
+/* Disclaimers and notes - italicized and subtle */
+.Menu em,
+.Menu i {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* Two-column layout for menu sections on larger screen s */
+@media (min-width: 769px) {
+  .pizza ul,
+  .sandwiches ul,
+  .drinks ul {
+    column-count: 2;
+    column-gap: 3rem;
+  }
+  
+  .Menu li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* Sticky Header Styles - Floating Rounded Design */
+.sticky-header {
+    position: sticky;
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    margin: -10px 10px 20px 10px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgba(13, 17, 46, 0.7) 0%, rgba(27, 27, 37, 0.7) 100%);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 229, 255, 0.2);
+}
+
+.sticky-header .logo {
+    color: white;
+    font-family: "Faster One", system-ui, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.6), 0 0 8px rgba(255, 49, 49, 0.4);
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #00E5FF;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    background: transparent;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-menu li {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-menu a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 0.95rem;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 20px;
+    background: rgba(0, 229, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    line-height: 1;
+}
+
+.nav-menu a:hover {
+    background: rgba(0, 229, 255, 0.25);
+    border-color: #00E5FF;
+    color: #00E5FF;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.6), inset 0 0 10px rgba(0, 229, 255, 0.3);
+    transform: translateY(-8px);
+}
+
+/* Salads Section Layout */
+.salads {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.salads-content {
+  flex: 1;
+  max-width: 60%;
+}
+
+.salads-content h3 {
+  text-align: left;
+}
+
+.salads-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.salads-content li {
+  max-width: 65ch;
+  margin-bottom: 1.5rem;
+}
+
+    .dressings-box {        
+        flex: 0 0 auto;
+        max-width: 35%;
+        border: 3px solid #00E5FF;
+        border-radius: 15px;
+        padding: 2rem;
+        background: rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+        text-align: left;
+    }
+
+.dressings-box h4 {
+  margin-top: 0;
+  color: #00E5FF;
+  text-align: left;
+}
+
+.dressings-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dressings-box li {
+  padding: 0.5rem 0;
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.dressings-box li:last-child {
+  border-bottom: none;
+}
+
+/* Build Your Own Pizza Section - Single Box */
+.build-your-own-box {
+  margin-top: 3rem;
+  border: 3px solid #00E5FF;
+  border-radius: 15px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+}
+
+.build-your-own-box h4 {
+  margin-top: 0;
+  color: #00E5FF;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.basic-cheese {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-bottom: 2px solid rgba(0, 229, 255, 0.3);
+}
+
+.basic-cheese .price {
+  color: var(--color-text);
+}
+
+.toppings-header {
+  text-align: center;
+  color: #00E5FF;
+  font-weight: bold;
+  margin: 1.5rem 0;
+}
+
+.toppings-grid {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.topping-category {
+  flex: 1;
+  min-width: 200px;
+  text-align: left;
+}
+
+.topping-category h5 {
+  color: #00E5FF;
+  font-family: "Tilt Neon", sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(0, 229, 255, 0.4);
+}
+
+.topping-category h5 .price {
+  float: right;
+  font-size: 0.9rem;
+}
+
+.topping-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topping-category li {
+  padding: 0.3rem 0;
+  max-width: 100%;
+  margin-bottom: 0.2rem;
+  font-size: 0.95rem;
+}
+
+/* Make vegetables list 2 columns */
+.topping-category:last-child ul {
+  column-count: 2;
+  column-gap: 1.5rem;
+}
+
+.topping-category:last-child li {
+  break-inside: avoid;
+}
+
+/* Hero Section */
+.hero {
+  margin: -20px -20px 2rem -20px; /* Extend to edges, compensate for body padding */
+  width: calc(100% + 40px); /* Full width including body padding */
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* About Us Section Layout */
+.About-Us {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  text-align: left;
+}
+
+.about-image {
+  flex: 0 0 auto;
+  max-width: 40%;
+  align-self: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: 3px solid #00E5FF;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+}
+
+.hours-and-location {
+    border: 3px solid #00E5FF;
+    border-radius: 15px;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
+    align-items: flex-start;
 }
 
-.column{
+.hours-and-location h2 {
+    color: #e5e7eb;
+    text-align: left;
+    margin-top: 0;
+    width: 100%;
+}
+
+.column {
     flex: 1;
+    min-width: 250px;
 }
 
-@media (max-width: 768px) { /* Example breakpoint for smaller screens */
-  .column {
-    flex-basis: 100%; /* Makes columns take full width on smaller screens */
-  }
+.column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.column li:last-child {
+    border-bottom: none;
+}
+
+.column iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 229, 255, 0.3);
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1 / 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Tablet Gallery Layout */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Footer Section */
+footer {
+    margin: 4rem 10px 10px 10px;
+    padding: 2rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 229, 255, 0.2);
+    background: linear-gradient(135deg, rgba(13, 17, 46, 0.7) 0%, rgba(27, 27, 37, 0.7) 100%);
+    backdrop-filter: blur(15px);
+    text-align: center;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.footer-nav a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+    background: rgba(0, 229, 255, 0.1);
+}
+
+.footer-nav .back-to-top {
+    color: var(--neon-red);
+    font-weight: bold;
+    border: 2px solid var(--neon-red);
+    padding: 0.5rem 1.5rem;
+}
+
+.footer-nav .back-to-top:hover {
+    color: white;
+    background: var(--neon-red);
+    box-shadow: 0 0 20px var(--neon-red);
+    text-shadow: none;
+}
+
+.footer-content {
+    padding: 1.5rem 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-content p {
+    margin: 0.5rem auto;
+    text-align: center;
+    font-size: 0.9rem;
+     max-width: 100%;
+}
+
+/* Mobile Styles - All devices under 768px */
+@media (max-width: 768px) {
+    /* Body */
+    body {
+        padding: 10px;
+    }
+    
+    /* Typography */
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Header */
+    .sticky-header {
+        margin: 0 10px 10px 10px;
+        top: 10px;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        gap: 0.75rem;
+        border-radius: 30px;
+    }
+
+    .sticky-header .logo {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+
+    .nav-menu ul {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .nav-menu li {
+        flex: 1;
+    }
+
+    .nav-menu a {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    .nav-menu a:hover {
+        transform: translateY(-5px);
+    }
+    
+    /* Hero */
+    .hero {
+        margin: -10px -10px 1rem -10px;
+        width: calc(100% + 20px);
+    }
+    
+    /* Salads */
+    .salads {
+        flex-direction: column;
+    }
+    
+    .salads-content,
+    .dressings-box {
+        max-width: 100%;
+    }
+    
+    /* Build Your Own Pizza */
+    .toppings-grid {
+        flex-direction: column;
+    }
+    
+    .topping-category {
+        min-width: 100%;
+    }
+    
+    /* About Us */
+    .About-Us {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        max-width: 100%;
+    }
+    
+    /* Hours and Location */
+    .hours-and-location {
+        flex-direction: column;
+    }
+    
+    .column {
+        min-width: 100%;
+    }
+    
+    .column iframe {
+        height: 250px;
+    }
+    
+    /* Gallery */
+    .gallery {
+        padding: 2rem 0.5rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .gallery-item {
+        aspect-ratio: 16 / 9;
+    }
+    
+    /* Footer */
+    footer {
+        margin: 2rem 10px 10px 10px;
+        padding: 1.5rem 1rem;
+        border-radius: 30px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-nav a {
+        width: 80%;
+        text-align: center;
+    }
 }

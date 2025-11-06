@@ -11,56 +11,409 @@
     
 </head>
 <body>
-    <header>
+    <div id="top"></div>
+    <header class="sticky-header">
         <div class="logo">The Pizza Place</div>
-        <nav>
+        <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="#top">Home</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#About-Us">About Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="hero">
-            <h1>Welcome to The Pizza Place</h1>
-            <p>Enjoy our delicious pizzas made with fresh ingredients.</p>
+            <img src="assets/Hero.png" alt="Hero Image">
         </div>
-        <section class="hours-and-location">
+        <section class="hours-and-location" id="hours">
             <div class="column">
             <h2>Hours & Location</h2>
             
             <p><strong>Hours:</strong></p>
             <ul>
-                <li>Monday - Friday: 11am - 10pm</li>
-                <li>Saturday - Sunday: 12pm - 11pm</li>
+                <li>Monday - Thursday  11am - 9 pm</li>
+                <li>Friday & Saturday  11am - 9 pm</li>
+                <li>Sunday  4 pm - 9 pm</li>
             </ul>
             </div>
             <div class="column">
             <h2>Find Us Here</h2>
-            <iframe>
-
-            </iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2937.465569081517!2d-87.82299762367677!3d42.58786472067877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88055e5e74d44a8b%3A0x315603ba8ae3cfff!2s625%2052nd%20St%2C%20Kenosha%2C%20WI%2053140!5e0!3m2!1sen!2sus!4v1761850914471!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
 
-        <section class ="About-Us">
-            <h2>About Us</h2>
+        <section class ="About-Us" id="About-Us">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>Nestled in the heart of Kenosha, Wisconsin, The Pizza Place has been a beloved local institution since 1965. With its retro charm and warm, welcoming atmosphere, it’s more than just a restaurant—it’s a community gathering spot where generations have come together over slices of handcrafted pizza and hearty sandwiches. The Pizza Place’s enduring popularity is rooted in its commitment to quality ingredients, time-tested recipes, and a menu that balances tradition with a touch of modern flair.</p>
+
+                <p>Specializing in pizza, sandwiches, salads, and cocktails, The Pizza Place offers something for everyone. Whether you're craving a classic pepperoni pie, a fresh Chef salad, or a signature cocktail to wind down the evening, the menu is designed to satisfy. The kitchen prides itself on using locally sourced produce and meats whenever possible, and the bar features a curated selection of Wisconsin craft spirits and brews. It’s the kind of place where the food is as memorable as the company you keep.</p>
+
+                <p>Beyond its menu, The Pizza Place is deeply woven into the fabric of Kenosha’s community. From hosting local art nights and trivia events to supporting neighborhood initiatives, the restaurant has always been more than a business—it’s a legacy. Patrons often share stories of their first dates, family dinners, and celebrations held within its cozy walls. With over six decades of history, The Pizza Place continues to serve up not just great food, but a sense of belonging that's hard to find anywhere else.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/adrenaline.png" alt="About Us Image">  
+            </div>
         </section>
 
-        <section class ="Menu">
+        <!-- GALLERY -->
+        <section class="gallery" id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/images/eatSign.png" alt="Gallery Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/image.png" alt="Gallery Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/lateNight.png" alt="Gallery Image 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/order.png" alt="Gallery Image 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/pizzaSign.png" alt="Gallery Image 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/wall.png" alt="Gallery Image 6">
+                </div>
+            </div>
+        </section>
+
+        <section class="Menu" id="Menu">
             <h2>Menu</h2>
+            
+            <!-- APPETIZERS -->
+            <section class="appetizers">
+                <h3>Appetizers</h3>
+                <ul>
+                    <li>
+                        <strong>NACHOS - <span class="price">$4</span></strong><br>
+                        Basket of Corn Tortilla Chips with 8oz Hot Nacho Cheese
+                    </li>
+                    <li>
+                        <strong>NACHO GRANDE - <span class="price">$8</span></strong><br>
+                        Our delicious House-made Tostado Beef served on Corn Tortilla Chips and topped with Shredded Cheddar Cheese, Lettuce, Tomato and Black Olives. Served with a side of Hot Nacho Cheese.
+                    </li>
+                    <li>
+                        <strong>FRESH BAKED GARLIC TOAST BASKET - <span class="price">$3</span></strong><br>
+                        House-made Ranch Dressing $1<br>
+                        House-made Pizza Sauce $1
+                    </li>
+                </ul>
+            </section>
 
-            <div class = "drinks">
+            <!-- SALADS -->
+            <section class="salads">
+                <div class="salads-content">
+                    <div class="section-title-with-icon">
+                        <img src="assets/saladNeon.png" alt="Salad Icon" class="section-icon">
+                        <h3>Salads</h3>
+                    </div>
+                    <p class="menu-note">Salads can be made with fresh Baby Spinach or Fresh Cut Romaine Lettuce for an additional $2</p>
+                    
+                    <ul>
+                    <li>
+                        <strong>HOUSE SALAD - <span class="price">$4</span></strong><br>
+                        Fresh Cut Iceberg Lettuce, Tomatoes, Onions, Wisconsin Cheddar Cheese and Croutons.
+                    </li>
+                    <li>
+                        <strong>SIDE CAESAR SALAD - <span class="price">$5</span></strong><br>
+                        Freshly Chopped Romaine Lettuce, Croutons, Onions, & Tomatoes topped with Shredded Parmesan Cheese & Caesar Dressing.
+                    </li>
+                    <li>
+                        <strong>CHEF'S SALAD - <span class="price">$8</span></strong><br>
+                        Fresh Cut Iceberg Lettuce, Lean Premium Deli Ham, Tender Sliced Whole Turkey, Tomatoes, Onions, Hard-boiled Egg, & Wisconsin Cheddar Cheese. Served with Fresh Baked Garlic Toast & Choice of Dressing.
+                    </li>
+                    <li>
+                        <strong>GARDEN SALAD - <span class="price">$7</span></strong> (Vegetarian)<br>
+                        Fresh Cut Iceberg Lettuce, Tomatoes, Onions, Green Pepper, Black Olives, Hard-boiled Egg, and Wisconsin Cheddar Cheese. Served with Fresh Baked Garlic Toast and Choice of Dressing.
+                    </li>
+                    <li>
+                        <strong>TACO SALAD - <span class="price">$8</span></strong><br>
+                        Fresh Cut Iceberg Lettuce topped with our specialty House made Tostada Beef, Wisconsin Cheddar Cheese, Tomatoes, Black Olives and Corn Chips. Served with Tostada Hot Sauce, Sour Cream and Salsa.
+                    </li>
+                    <li>
+                        <strong>ITALIAN BEEF VINAIGRETTE - <span class="price">$8</span></strong><br>
+                        Fresh Cut Iceberg Lettuce with Thinly Shaved Tender Roast Beef, Italian Green Beans, Onions, Tomatoes and Black Olives. Served with Fresh Baked Garlic Toast and Italian Dressing.
+                    </li>
+                    <li>
+                        <strong>GREEK SALAD - <span class="price">$8</span></strong><br>
+                        Fresh Cut Iceberg Lettuce with Onions, Tomatoes, Black Olives, Green Peppers, Marinated Cucumbers and Crumbled Feta Cheese. Served with Fresh Baked Garlic Toast and Italian Dressing.
+                    </li>
+                </ul>
+                </div>
                 
-            </div>
+                <div class="dressings-box">
+                    <h4>House Dressings</h4>
+                    <ul>
+                        <li>Homemade Ranch</li>
+                        <li>Homemade French</li>
+                        <li>Homemade Italian</li>
+                        <li>Caesar</li>
+                        <li>Blue Cheese</li>
+                        <li>Thousand Island</li>
+                        <li>Balsamic Vinegar</li>
+                        <li>Red Wine Vinegar & Oil</li>
+                        <li>Fat Free Raspberry Vinaigrette</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- PIZZA -->
+            <section class="pizza">
+                <div class="section-title-with-icon">
+                    <img src="assets/pizzaNeon.png" alt="Pizza Icon" class="section-icon">
+                    <h3>Pizza</h3>
+                </div>
+                <p class="menu-note">Every Great Pizza Starts with Our Thin Crisp Crust, House-made for over 50 years!</p>
+                
+                <ul>
+                    <li>
+                        <strong>TOSTADA PIZZA - <span class="price">$12 / $14 / $17</span></strong><br>
+                        Award Winning Tostada Beef layered over House-made Pizza Sauce and Baked with Wisconsin White Colby Cheese, Topped with Freshly Shredded Lettuce, Tomatoes, Wisconsin Cheddar Cheese and House-made Tostada Hot Sauce.
+                    </li>
+                    <li>
+                        <strong>B.L.T. PIZZA - <span class="price">$12 / $15 / $18</span></strong><br>
+                        A Generous amount of Smoked Bacon layered over Salad Dressing, Baked with Wisconsin White Colby Cheese. Topped with Freshly Shredded Lettuce and Tomatoes.
+                    </li>
+                    <li>
+                        <strong>VEGETARIAN PIZZA - <span class="price">$12 / $14 / $17</span></strong><br>
+                        Tomatoes, Zucchini, Carrots, Onions, Broccoli, Wisconsin Cheddar & White Colby Cheeses, and Garlic Olive Oil layered over House-made Pizza Sauce
+                    </li>
+                    <li>
+                        <strong>GREEK - <span class="price">$12 / $15 / $19</span></strong><br>
+                        Fresh Spinach, Tomatoes, Black & Green Olives, Feta Cheese, Oregano and Garlic Basil Olive Oil layered over Wisconsin White Colby Cheese.
+                    </li>
+                    <li>
+                        <strong>GARLIC CHICKEN PIZZA - <span class="price">$14 / $16 / $19</span></strong><br>
+                        Tender Chopped Chicken Breast, Broccoli, Basil, Oregano, Garlic Olive Oil layered over Wisconsin White Colby Cheese.
+                    </li>
+                    <li>
+                        <strong>LOBSTER PIZZA - <span class="price">$15 / $19 / $23</span></strong><br>
+                        A Generous amount of Lobster Sensation, Tomatoes, Parsley, Garlic Olive Oil layered over Wisconsin White Colby Cheese. Served with Lemon Wedges.
+                    </li>
+                    <li>
+                        <strong>PESTO PIZZA - <span class="price">$11 / $14 / $17</span></strong><br>
+                        A Generous Layer of Basil Pesto topped with Wisconsin Colby Cheese, Tomatoes, and Feta Cheese.
+                    </li>
+                    <li>
+                        <strong>QUESADILLA PIZZA - <span class="price">$14 / $16 / $19</span></strong><br>
+                        Tender Chopped Chicken Breast, Green Peppers, Onions, Bacon and Wisconsin Cheddar Cheese layered over Wisconsin White Colby Cheese and our House-made Spicy Aioli Sauce.
+                    </li>
+                    <li>
+                        <strong>BBQ CHICKEN PIZZA - <span class="price">$14 / $16 / $19</span></strong><br>
+                        Tender Chopped Chicken Breast, Banana Peppers, Sliced Red Onions, and Wisconsin White Colby Cheese layered over Tangy Barbecue Sauce, topped with Wisconsin Cheddar Cheese.
+                    </li>
+                </ul>
+
+                <div class="build-your-own-box">
+                    <h4>Build Your Own Pizza!</h4>
+                    
+                    <div class="basic-cheese">
+                        <strong>BASIC CHEESE - <span class="price">$9 / $11 / $13</span></strong><br>
+                        Made with our Homemade Thin Crisp Crust
+                    </div>
+                    
+                    <p class="toppings-header">Add ingredients listed below to our basic cheese:</p>
+                    
+                    <div class="toppings-grid">
+                        <div class="topping-category">
+                            <h5>Premium Meats & Cheese <span class="price">$1 / $2 / $3</span></h5>
+                            <ul>
+                                <li>Sausage</li>
+                                <li>Pepperoni</li>
+                                <li>Ham</li>
+                                <li>Smoked Bacon</li>
+                                <li>Anchovies</li>
+                                <li>Feta Cheese</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="topping-category">
+                            <h5>Premium Proteins <span class="price">$3 / $4 / $5</span></h5>
+                            <ul>
+                                <li>Shrimp</li>
+                                <li>Marinated Chicken</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="topping-category">
+                            <h5>Fresh Vegetables <span class="price">$1 / $1 / $2</span></h5>
+                            <ul>
+                                <li>Spinach</li>
+                                <li>Mushrooms</li>
+                                <li>Broccoli</li>
+                                <li>Zucchini</li>
+                                <li>Pineapple</li>
+                                <li>Diced Jalapeños</li>
+                                <li>Black Olives</li>
+                                <li>Green Olives</li>
+                                <li>Tomato</li>
+                                <li>Green Pepper</li>
+                                <li>Onions</li>
+                                <li>Chopped Garlic</li>
+                                <li>Banana Peppers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SANDWICHES -->
+            <section class="sandwiches">
+                <div class="section-title-with-icon">
+                    <img src="assets/sandwichNeon.png" alt="Sandwich Icon" class="section-icon">
+                    <h3>Sandwiches</h3>
+                </div>
+                <p class="menu-note">Served on our Hot Crusty Italian Bread with Kettle Cooked Chips and a Pickle</p>
+                
+                <h4>Submarine Sandwiches</h4>
+                <ul>
+                    <li>
+                        <strong>TRADITIONAL - <span class="price">8 in. $6 | 16 in. $12 | 24 in. $18</span></strong><br>
+                        Cotto Salami and Bologna, Sliced Wisconsin White Colby Cheese, Tomatoes, Onions, Lettuce and Salad Dressing.
+                    </li>
+                    <li>
+                        <strong>THREE CHEESE - <span class="price">8 in. $6 | 16 in. $12 | 24 in. $18</span></strong><br>
+                        Fresh Sliced Wisconsin Cheddar & White Colby, with Swiss, Tomatoes, Onions, Lettuce and Salad Dressing.
+                    </li>
+                </ul>
+
+                <h4>Specialty Sandwiches</h4>
+                <ul>
+                    <li>
+                        <strong>REUBEN - <span class="price">$7</span></strong><br>
+                        Hot Corned Beef, Creamy Swiss Cheese, Zesty Dressing with Spiced Sauerkraut.
+                    </li>
+                    <li>
+                        <strong>YORKSHIRE BEEF - <span class="price">$7</span></strong><br>
+                        Tender Roast Beef with Fresh Sliced Wisconsin Cheddar Cheese and a side of Au Jus.
+                    </li>
+                    <li>
+                        <strong>RACHEL - <span class="price">$7</span></strong><br>
+                        Tender Roast Beef, Creamy Swiss Cheese and Spiced Sauerkraut.
+                    </li>
+                    <li>
+                        <strong>HAM & SWISS - <span class="price">$7</span></strong><br>
+                        Fresh Sliced Premium Lean Deli Ham, Creamy Swiss Cheese, Shredded Lettuce, and Salad Dressing.
+                    </li>
+                    <li>
+                        <strong>ITALIAN MEATBALL - <span class="price">$7</span></strong><br>
+                        6 Large Savory Meatballs Stewed in an Italian Tomato Sauce, topped with Mozzarella Cheese.
+                    </li>
+                    <li>
+                        <strong>TURKEY DELUXE - <span class="price">$7</span></strong><br>
+                        Tender Sliced Whole Turkey Breast, Shredded Lettuce, Tomatoes, and Zesty Dressing.
+                    </li>
+                    <li>
+                        <strong>MEAT LOAF - <span class="price">$6</span></strong><br>
+                        Homemade with Lean Ground Beef, Served Cold with Lettuce and Salad Dressing.
+                    </li>
+                    <li>
+                        <strong>TUNA SUPREME - <span class="price">$7</span></strong><br>
+                        Fresh Made Salad of Celery, Onion, & Tuna with Shredded Lettuce, Tomatoes, Sliced Wisconsin Cheddar Cheese, and Zesty Dressing.
+                    </li>
+                    <li>
+                        <strong>CLUB - <span class="price">$7</span></strong><br>
+                        Tender Sliced Turkey Breast, Lean Ham, Wisconsin Cheddar Cheese, Tomatoes, Lettuce and Salad Dressing.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- DRINKS -->
+            <section class="drinks">
+                <h3>Specialty Cocktails</h3>
+                <ul>
+                    <li>
+                        <strong>PINA COLADA - <span class="price">$8</span></strong> (Blended)<br>
+                        Rum, Pineapple Juice and Coconut Cream
+                    </li>
+                    <li>
+                        <strong>SCORPION - <span class="price">$8</span></strong><br>
+                        Exotic Blend of Pineapple and Orange Juice, Gin, Rum and Creme de Almond
+                    </li>
+                    <li>
+                        <strong>LONG ISLAND - <span class="price">$8</span></strong><br>
+                        Whiskey, Rum, Vodka, Triple Sec, Lemon Juice and Coke
+                    </li>
+                    <li>
+                        <strong>PURPLE RAIN - <span class="price">$8</span></strong><br>
+                        Creme de Almond, Blue Curacao, Rum, Lime Juice and Squirt.
+                    </li>
+                    <li>
+                        <strong>OCEAN BREEZE - <span class="price">$8</span></strong><br>
+                        Rum, Vodka, Triple Sec, Cranberry Juice and Orange Juice.
+                    </li>
+                    <li>
+                        <strong>ZOMBIE - <span class="price">$8</span></strong><br>
+                        Rum, Apricot Brandy, Pineapple Juice
+                    </li>
+                    <li>
+                        <strong>MAITAI - <span class="price">$8</span></strong><br>
+                        Tropical Blend of Rum, Triple Sec, Sugar and Pineapple Juice.
+                    </li>
+                    <li>
+                        <strong>RASPBERRY LEMONADE - <span class="price">$8</span></strong><br>
+                        Whiskey, Triple Sec, Raspberry Schnapps, Sprite and Lemon Juice.
+                    </li>
+                    <li>
+                        <strong>VACATION? - <span class="price">$8</span></strong><br>
+                        Whiskey, Peach Schnapps, Pineapple Juice, and Squirt
+                    </li>
+                    <li>
+                        <strong>SWEET TART - <span class="price">$8</span></strong><br>
+                        Vodka, Blue Curacao, Raspberry Schnapps, Triple Sec, Cranberry Juice, Sprite and Squirt.
+                    </li>
+                    <li>
+                        <strong>STRAWBERRY DAIQUIRI - <span class="price">$8</span></strong> (Blended)<br>
+                        Strawberries blended with Rum and Lemon Juice
+                    </li>
+                </ul>
+
+                <h3>Beer, Wine, & Seltzer</h3>
+                <ul>
+                    <li>Miller Lite <span class="price">$4</span></li>
+                    <li>Miller High Life <span class="price">$4</span></li>
+                    <li>Old Milwaukee <span class="price">$4</span></li>
+                    <li>White Claw <span class="price">$5</span></li>
+                    <li>Truly <span class="price">$5</span></li>
+                    <li>New Glarus (rotating choice, please ask your server) <span class="price">$5</span></li>
+                    <li>Cabernet Sauvignon <span class="price">$6</span></li>
+                    <li>Sauvignon Blanc <span class="price">$6</span></li>
+                    <li>Pinot Grigio <span class="price">$6</span></li>
+                    <li>Pinot Noir <span class="price">$6</span></li>
+                </ul>
+
+                <h3>Soft Drinks</h3>
+                <ul>
+                    <li>COKE - <span class="price">$2</span></li>
+                    <li>DIET COKE - <span class="price">$2</span></li>
+                    <li>SPRITE - <span class="price">$2</span></li>
+                    <li>ROOT BEER - <span class="price">$2</span></li>
+                    <li>ORANGE JUICE - <span class="price">$2</span></li>
+                    <li>CRANBERRY JUICE - <span class="price">$2</span></li>
+                </ul>
+            </section>
         </section>
-
-
     </main>
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="#hours">Hours & Location</a>
+            <a href="#About-Us">About Us</a>
+            <a href="#Menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#top" class="back-to-top">Back to Top ↑</a>
+        </nav>
+        <div class="footer-content">
+            <p>&copy; 2025 The Pizza Place | 625 52nd St., Kenosha, WI 53140</p>
+            <p>Serving Kenosha since 1965</p>
+        </div>
+    </footer>
 </body>
-
-
-
-</html>
+</html> 
